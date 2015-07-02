@@ -1,0 +1,17 @@
+.wiki-search {
+  padding-top:25px;
+
+  .btn {
+    padding-right:2em;
+    padding-left:2em;
+  }
+
+  @include e(result) {
+    padding-top:10px;
+    text-align:center;
+    @include e(title) {
+      margin:0;
+      font-size:$font-size-sm;
+    }
+  }
+}

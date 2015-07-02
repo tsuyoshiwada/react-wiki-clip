@@ -1,0 +1,47 @@
+.input-group {
+  position:relative;
+  display:table;
+  width:100%;
+  border-collapse:separate;
+
+  @at-root {
+    &__addon,
+    &__btn,
+    &__control {
+      display:table-cell;
+    }
+
+    &__addon,
+    &__btn {
+      width:1%;
+      vertical-align:middle;
+      text-align:center;
+      white-space:nowrap;
+    }
+  }
+
+  @include e(addon) {
+    margin:0;
+    padding:6px 12px;
+    font-weight:normal;
+    line-height:1;
+  }
+
+  @include e(btn) {
+    position:relative;
+    font-size:0;
+    > .btn {
+      height:$control-height;
+    }
+    &:last-child > .btn {
+      z-index:2;
+    }
+  }
+
+  @include e(control) {
+    position:relative;
+    z-index:2;
+    float:left;
+    margin:0;
+  }
+}

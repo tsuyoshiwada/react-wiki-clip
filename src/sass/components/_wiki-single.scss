@@ -1,0 +1,82 @@
+.wiki-single {
+
+  // [編集]
+  .mw-editsection {
+    display:none;
+  }
+
+  @include e(heading) {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:2;
+    display:table;
+    table-layout:fixed;
+    width:100%;
+    min-width:320px;
+    height:$header-height;
+    padding-right:$margin-base / 2;
+    padding-left:$margin-base / 2;
+    background:#fff;
+    box-shadow:$depth-1;
+    vertical-align:middle;
+    > * {
+      display:table-cell;
+      vertical-align:middle;
+      height:$header-height;
+    }
+  }
+
+  @include e(control) {
+    width:25%;
+    @include m(left) {
+      text-align:left;
+    }
+    @include m(right) {
+      text-align:right;
+    }
+  }
+
+  @include e(title) {
+    width:50%;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    text-align:center;
+  }
+
+  @include e(loading) {
+    position:absolute;
+    top:$header-height * 2;
+    left:50%;
+    margin-left:-35px;
+  }
+
+  @include e(body) {
+    padding-top:$header-height + $margin-base;
+    padding-bottom:$header-height + $margin-base;
+    word-wrap:break-word;
+    line-height:1.6;
+    .container * {
+      width:auto !important;
+    }
+    h2,
+    h3 {
+      margin:1.5em 0 .6em 0;
+    }
+    table {
+      display:block;
+      overflow-x:scroll;
+      -webkit-overflow-scrolling:touch;
+      word-wrap:normal;
+    }
+    td,
+    th {
+      padding:.2em;
+      border:1px solid lighten($gray-lighter, 3%);
+    }
+    th {
+      background:lighten($gray-lighter, 6%);
+    }
+  }
+}

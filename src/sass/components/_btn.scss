@@ -1,0 +1,65 @@
+@mixin _btn-theme-factory($color, $background-color){
+  color:$color;
+  background-color:$background-color;
+
+  &:hover {
+    color:$color;
+    background-color:darken($background-color, 8%);
+  }
+
+  &:active {
+    color:$color;
+    background-color:darken($background-color, 12%);
+  }
+}
+
+.btn {
+  display:inline-block;
+  padding:6px 12px;
+  border:0;
+  text-decoration:none;
+  text-align:center;
+  white-space:nowrap;
+  vertical-align:middle;
+  font-size:$font-size-md;
+  font-family:$font-sans-serif;
+  font-weight:normal;
+  cursor:pointer;
+  user-select:none;
+  touch-action:manipulation;
+
+  &:focus {
+    outline:none;
+  }
+
+  @include m(default) {
+    @include _btn-theme-factory($font-color, $gray-lighter);
+  }
+
+  @include m(primary) {
+    @include _btn-theme-factory(#fff, $color-teal);
+  }
+
+  @include m(danger) {
+    @include _btn-theme-factory(#fff, $color-red);
+  }
+
+  @include m(transparent) {
+    $_color:$font-color;
+    color:$_color;
+    background-color:transparent;
+
+    &:hover {
+      color:lighten($_color, 20%);
+    }
+
+    &:active {
+      color:darken($_color, 10%);
+    }
+  }
+
+  @include m(sm) {
+    padding:4px 10px;
+    font-size:$font-size-sm;
+  }
+}

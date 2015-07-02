@@ -1,0 +1,61 @@
+.footer {
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:$footer-height + 1;
+  padding-right:$margin-base;
+  padding-left:$margin-base;
+  background:#fff;
+  border-top:1px solid $gray-lighter;
+  font-size:$font-size-x-sm;
+
+  .is-wiki & {
+    display:none;
+  }
+
+  @include e(nav) {
+    float:right;
+    font-size:0;
+    > li {
+      display:inline-block;
+      font-size:$font-size-x-sm;
+      line-height:$footer-height;
+      & + li {
+        margin-left:2em;
+      }
+    }
+  }
+
+  @include mq-small {
+    height:$footer-height-sm + 1;
+    padding-right:10px;
+    padding-left:10px;
+
+    @include e(nav) {
+      float:none;
+      margin:0 0 10px 0;
+      padding:10px 0 0 0;
+      text-align:center;
+      > li {
+        line-height:1.4;
+        & + li {
+        }
+      }
+    }
+  }
+}
+
+
+.copyright {
+  float:left;
+  margin:0;
+  line-height:$footer-height;
+  letter-spacing:.05em;
+
+  @include mq-small {
+    float:none;
+    line-height:1.4;
+    text-align:center;
+  }
+}

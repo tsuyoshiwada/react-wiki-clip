@@ -1,0 +1,85 @@
+.header {
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
+  width:100%;
+  height:$header-height;
+  background:$color-teal;
+  box-shadow:$depth-1;
+
+  .is-wiki & {
+    display:none;
+  }
+
+  .brand {
+    float:left;
+    margin:0;
+    font-size:$font-size-sm;
+    line-height:$header-height;
+    a {
+      display:block;
+      padding:0 floor($header-height * 0.4);
+      color:#fff;
+      text-decoration:none;
+      &:hover {
+        color:darken($color-teal, 10%);
+      }
+    }
+    .icon-logo {
+      position:relative;
+      top:10px;
+      font-size:1.6rem;
+    }
+  }
+
+  .gnav {
+    float:right;
+  }
+
+  @include mq-small {
+    .brand {
+      a {
+        padding:0 floor($header-height * 0.2);
+      }
+    }
+  }
+}
+
+
+.gnav {
+  @extend .clearfix;
+  margin:0;
+  list-style:none;
+
+  @include e(item) {
+    float:left;
+    font-size:$font-size-sm;
+    line-height:$header-height;
+    a {
+      display:block;
+      padding:0 floor($header-height * 0.4);
+      color:#fff;
+      text-decoration:none;
+      &:hover {
+        color:#fff;
+        background-color:lighten($color-teal, 10%);
+      }
+      &.active {
+        color:#fff;
+        background-color:lighten($color-teal, 5%);
+      }
+    }
+  }
+
+  @include e(item__text) {
+    display:inline-block;
+    margin-left:.2em;
+  }
+
+  @include mq-small {
+    @include e(item__text) {
+      display:none;
+    }
+  }
+}

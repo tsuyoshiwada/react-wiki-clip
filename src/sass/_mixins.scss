@@ -1,0 +1,26 @@
+
+// BEM - element
+@mixin e($name) {
+  @at-root &__#{$name} {
+    @content;
+  }
+}
+
+// BEM - modifier
+@mixin m($name) {
+  @at-root &--#{$name} {
+    @content;
+  }
+}
+
+@mixin mq-large {
+  @media only screen and (min-width:$screen-lg) {
+    @content;
+  }
+}
+
+@mixin mq-small {
+  @media only screen and (max-width:$screen-sm) {
+    @content;
+  }
+}
