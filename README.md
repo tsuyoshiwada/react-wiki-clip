@@ -5,6 +5,7 @@ MediaWikiAPIとReact.jsを使ったサンプルアプリ。
 
 ## デモページ
 ![screenhost](http://example.com/)
+[デモページ](http://tsuyoshiwada.github.io/react-wiki-clip/)
 
 
 ## ブログ記事
