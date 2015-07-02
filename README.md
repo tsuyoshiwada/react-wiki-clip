@@ -3,17 +3,17 @@ Clip Wiki
 
 MediaWikiAPIとReact.jsを使ったサンプルアプリ。
 
+
 ## デモページ
-![screenhost](http://example.com/)
+![screenhost](https://raw.githubusercontent.com/tsuyoshiwada/react-wiki-clip/images/screenshot.png)
 [デモページ](http://tsuyoshiwada.github.io/react-wiki-clip/)
 
 
 ## ブログ記事
-[記事名](http://example.com/)
+[これから書きます](http://example.com/)
 
 
 ## 動かし方
-
 ```
 $ git clone git@github.com:tsuyoshiwada/react-wiki-clip.git
 $ cd react-wiki-clip
