@@ -10,7 +10,7 @@ MediaWikiAPIとReact.jsを使ったサンプルアプリ。
 
 
 ## ブログ記事
-[これから書きます](http://example.com/)
+[React.jsとMediaWikiAPIでWikipediaのビューワーアプリを作ってみた](http://webdesign-dackel.com/2015/07/03/react-wiki-clip/)
 
 
 ## 動かし方
